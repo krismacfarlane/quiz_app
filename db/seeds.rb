@@ -24,7 +24,7 @@ Instructor.create([
   ])
 
 Cohort.create([
-  {name: "godot", instructor_id: 1, room: "3E", producer: "Sarah"}
+  {name: "godot", instructors_id: 1, room: "3E", producer: "Sarah"}
   ])
 
 Quiz.create([
@@ -33,9 +33,9 @@ Quiz.create([
   ])
 
 Question.create([
-  {quiz_id: 1, content: "What is the best color?", got_right: false, points: 3}
+  {quizzes_id: 1, content: "What is the best color?", got_right: false, points: 3}
   ])
 
 Answer.create([
-  {question_id: 1, content: "green", is_picked: false}
+  {questions_id: 1, content: "green", is_picked: false}
   ])
