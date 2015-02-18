@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
       if instructor && instructor.authenticate(params[:password])
         session[:instructor_id] = instructor.id
-        redirect_to instructors_path
+        redirect_to instructor_path(instructor)
       else
         render :new
       end
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 
       if student && student.authenticate(params[:password])
         session[:student_id] = student.id
-        redirect_to students_path
+        redirect_to student_path(student)
       else
         render :new
       end

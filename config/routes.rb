@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 # /////////RESOURCE/CRUD ROUTES/////////////
   resources :instructors
   resources :students
+  resources :quizzes
 
 end
