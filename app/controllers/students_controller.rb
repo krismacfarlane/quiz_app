@@ -1,10 +1,6 @@
 class StudentsController < ApplicationController
   before_action(:authorize_student, :except => [:new, :create])
 
-  def index
-    @students = Student.all
-  end
-
   def show
     @student = Student.find(params[:id])
   end

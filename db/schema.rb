@@ -19,12 +19,12 @@ ActiveRecord::Schema.define(version: 20150218151710) do
   create_table "answers", force: :cascade do |t|
     t.string  "content"
     t.boolean "is_picked",    default: false
-    t.integer "questions_id"
+    t.integer "question_id"
   end
 
   create_table "cohorts", force: :cascade do |t|
     t.string   "name",           null: false
-    t.integer  "instructors_id", null: false
+    t.integer  "instructor_id", null: false
     t.string   "room",           null: false
     t.string   "producer",       null: false
     t.datetime "created_at"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20150218151710) do
     t.string  "content"
     t.boolean "got_right",  default: false
     t.integer "points",     default: 0
-    t.integer "quizzes_id"
+    t.integer "quiz_id"
   end
 
   create_table "quizzes", force: :cascade do |t|
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20150218151710) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "cohorts_id",      default: 1
+    t.integer  "cohort_id",      default: 1
   end
 
 end

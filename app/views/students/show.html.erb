@@ -1,0 +1,11 @@
+<h1>Welcome <%= @student.name.capitalize %></h1>
+
+<div class='taken'>
+  <ol>
+    <% @student.quizzes.each do |q| %>
+    <li><a href="/quizzes/<%= q.id %>"><%= q.name %></a></li>
+    <% end %>
+  </ol>
+</div>
+
+<%= button_to 'Check for New Quiz', student_path %>
