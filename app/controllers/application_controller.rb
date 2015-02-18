@@ -15,12 +15,12 @@ class ApplicationController < ActionController::Base
   helper_method(:current_instructor)
   helper_method(:current_student)
 
-  def authenticate_instructor
-    redirect_to '/login' unless current_instructor
+  def authorize_instructor
+    redirect_to '/login/instructor' unless current_instructor
   end
 
-  def authenticate_student
-    redirect_to '/login' unless current_student
+  def authorize_student
+    redirect_to '/login/student' unless current_student
   end
 
 end

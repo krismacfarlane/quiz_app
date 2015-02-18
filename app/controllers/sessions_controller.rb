@@ -8,16 +8,20 @@ class SessionsController < ApplicationController
     if(params[:title] == 'instructor')
       instructor = Instructor.find_by({email: params[:email]})
 
-      if instructor && instructor.authenticate_instructor(params[:password])
+      if instructor && instructor.authenticate(params[:password])
         session[:instructor_id] = instructor.id
-        redirect_to '/instructors/index'
+        redirect_to instructors_path
+      else
+        render :new
       end
     elsif(params[:title] == 'student')
       student = Student.find_by({email: params[:email]})
 
-      if student && student.authenticate_student(params[:password])
+      if student && student.authenticate(params[:password])
         session[:student_id] = student.id
-        redirect_to '/students/index'
+        redirect_to students_path
+      else
+        render :new
       end
     else
       redirect_to root_path

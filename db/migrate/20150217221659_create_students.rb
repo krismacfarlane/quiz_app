@@ -5,7 +5,7 @@ class CreateStudents < ActiveRecord::Migration
       t.string  'email',         null: false
       t.string  :password_digest
       t.timestamps
-      t.references :cohorts, default: 0
+      t.references :cohorts, :default => 0
     end
   end
 end
