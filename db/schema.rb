@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(version: 20150218151710) do
   end
 
   create_table "quizzes_students", force: :cascade do |t|
-    t.integer "students_id"
-    t.integer "quizzes_id"
+    t.integer "student_id"
+    t.integer "quiz_id"
   end
 
   create_table "students", force: :cascade do |t|
