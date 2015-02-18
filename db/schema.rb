@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20150218151710) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "cohorts_id",      default: 0
+    t.integer  "cohorts_id",      default: 1
   end
 
 end
