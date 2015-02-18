@@ -1,8 +1,14 @@
 <h1>Create a new Student</h1>
 
-<%= form_tag '/login/student' do %>
-  Name: <%= text_field_tag :name %><br>
-  Email: <%= text_field_tag :email %><br>
-  Password: <%= password_field_tag :password %><br>
-  <%= submit_tag "Login" %>
+<%= form_for(@student) do |s|%>
+
+  <%= s.label :name%>
+  <%= s.text_field :name%><br>
+  <%= s.label :email%>
+  <%= s.text_field :email%><br>
+  <%= s.label :password%>
+  <%= s.password_field :password%><br>
+  <%= s.label :password_confirmation%>
+  <%= s.password_field :password_confirmation%><br>
+  <%= s.submit%>
 <% end %>

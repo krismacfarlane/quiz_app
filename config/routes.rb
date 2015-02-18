@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
 # //////////SESSIONS ROUTES/////////////////
   get    '/login/:title'  => 'sessions#new'
-  post   '/login/:title'        => 'sessions#create'
+  post   '/login/:title'  => 'sessions#create'
   delete '/logout/:title' => 'sessions#destroy'
 
 # /////////RESOURCE/CRUD ROUTES/////////////
