@@ -1,8 +1,14 @@
 <h1>Create a new instructor</h1>
 
-<%= form_tag '/login/instructor' do %>
-  Name: <%= text_field_tag :name %><br>
-  Email: <%= text_field_tag :email %><br>
-  Password: <%= password_field_tag :password %><br>
-  <%= submit_tag "Login" %>
+<%= form_for(@instructor) do |i|%>
+
+  <%= i.label :name%>
+  <%= i.text_field :name%><br>
+  <%= i.label :email%>
+  <%= i.text_field :email%><br>
+  <%= i.label :password%>
+  <%= i.password_field :password%><br>
+  <%= i.label :password_confirmation%>
+  <%= i.password_field :password_confirmation%><br>
+  <%= i.submit%>
 <% end %>
