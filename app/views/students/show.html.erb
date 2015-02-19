@@ -2,7 +2,7 @@
 
 <div class='taken'>
   <ol>
-    <% @student.quizzes.each do |q| %>
+    <% @student.cohort.quizzes.each do |q| %>
     <li><a href="/quizzes/<%= q.id %>"><%= q.name %></a></li>
     <% end %>
   </ol>
