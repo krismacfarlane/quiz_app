@@ -28,8 +28,8 @@ Cohort.create([
   ])
 
 Quiz.create([
-  {name: "Quiz 1", grade: 0, has_grade: false},
-  {name: "Quiz 2", grade: 0, has_grade: false}
+  {name: "Quiz 1", grade: 0, has_grade: false, student_id: 1, cohort_id: 1},
+  {name: "Quiz 2", grade: 0, has_grade: false, student_id: 2, cohort_id: 1}
   ])
 
 Question.create([
