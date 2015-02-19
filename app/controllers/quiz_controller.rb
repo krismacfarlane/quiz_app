@@ -4,9 +4,9 @@ class QuizController < ApplicationController
     quiz_array = Quiz.where('been_taken = ? AND student_id = ?', false, session[:student_id])
     # quiz_array = Quiz.where(been_taken: false && :student_id == session[:student_id])
     @student = Student.find(session[:student_id])
-    binding.pry
+    # binding.pry
     # @student.cohort.quizzes
-    quiz_array = Quiz.where(been_taken: false)
+    quiz_array = Quiz.where(been_taken: false && cohort_id == @student.cohort_id)
 
     if(quiz_array == [])
       @response = "No quizzes, come back later"
