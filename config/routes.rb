@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   post   '/login/:title'  => 'sessions#create'
   delete '/logout/:title' => 'sessions#destroy'
 
+  get    '/quiz'          => 'quiz#index'
+
 # /////////RESOURCE/CRUD ROUTES/////////////
   resources :instructors
   resources :students
