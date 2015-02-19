@@ -1,0 +1,12 @@
+<h1>Looking for new quizzes</h1>
+
+<% if @quizs == nil %>
+  <h2><%= @response %></h2>
+<% else %>
+  <h2><%= @response %></h2>
+  <ul>
+    <% @quizs.each do |q| %>
+    <li><%= q.name %></li>
+    <% end %>
+  </ul>
+<% end %>
