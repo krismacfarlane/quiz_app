@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 20150218151710) do
     t.integer  "grade",      default: 0
     t.boolean  "has_grade",  default: false
     t.boolean  "been_taken", default: false
+    t.integer  "cohort_id"
+    t.integer  "student_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -64,9 +66,13 @@ ActiveRecord::Schema.define(version: 20150218151710) do
     t.string   "name",                        null: false
     t.string   "email",                       null: false
     t.string   "password_digest"
+    t.integer  "cohort_id",      default: 1
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
     t.integer  "cohorts_id",      default: 0
+=======
+>>>>>>> 0f474782b5906d8c335bc1193ae98f04ccd6a97c
   end
 
 end
