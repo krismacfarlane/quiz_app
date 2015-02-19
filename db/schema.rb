@@ -69,10 +69,7 @@ ActiveRecord::Schema.define(version: 20150218151710) do
     t.integer  "cohort_id",      default: 1
     t.datetime "created_at"
     t.datetime "updated_at"
-<<<<<<< HEAD
     t.integer  "cohorts_id",      default: 0
-=======
->>>>>>> 0f474782b5906d8c335bc1193ae98f04ccd6a97c
   end
 
 end
