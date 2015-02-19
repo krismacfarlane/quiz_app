@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20150218151710) do
 
   create_table "cohorts", force: :cascade do |t|
     t.string   "name",           null: false
-    t.integer  "instructor_id", null: false
+    t.integer  "instructor_id",  null: false
     t.string   "room",           null: false
     t.string   "producer",       null: false
     t.datetime "created_at"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150218151710) do
     t.string   "name",                       null: false
     t.integer  "grade",      default: 0
     t.boolean  "has_grade",  default: false
+    t.boolean  "been_taken", default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
