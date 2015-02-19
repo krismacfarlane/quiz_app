@@ -1,6 +1,7 @@
 class Quiz < ActiveRecord::Base
 
-  has_and_belongs_to_many :students
+  belongs_to :cohort
+  belongs_to :student
   has_many :questions
 
 end
