@@ -13,29 +13,39 @@ Quiz.destroy_all
 Question.destroy_all
 Answer.destroy_all
 
-Student.create([
-  {name: "Bob", email: "bob@gmail.com", password: "cats"},
-  {name: "Billy", email: "billy@gmail.com", password: "cats"}
-  ])
-
 Instructor.create([
   {name: "Phil", email: "phil@gmail.com", password: "cats"},
   {name: "PJ", email: "pj@gmail.com", password: "cats"}
-  ])
+])
+
+phil = Instructor.all.first
 
 Cohort.create([
-  {name: "godot", instructor_id: 1, room: "3E", producer: "Sarah"}
-  ])
+  {name: "godot", instructor: phil, room: "3E", producer: "Sarah"}
+])
+
+godot = Cohort.all.first
+
+Student.create([
+  {name: "Bob", email: "bob@gmail.com", password: "cats"},
+  {name: "Billy", email: "billy@gmail.com", password: "cats"}
+])
+
+bob, billy = * Student.all
 
 Quiz.create([
-  {name: "Quiz 1", grade: 0, has_grade: false, student_id: 1, cohort_id: 1},
-  {name: "Quiz 2", grade: 0, has_grade: false, student_id: 2, cohort_id: 1}
-  ])
+  {name: "Quiz 1", grade: 0, has_grade: false, student: bob, cohort: godot},
+  {name: "Quiz 2", grade: 0, has_grade: false, student: billy, cohort: godot}
+])
+
+quiz1 = Quiz.all.first
 
 Question.create([
-  {quiz_id: 1, content: "What is the best color?", got_right: false, points: 3}
-  ])
+  {quiz: quiz1, content: "What is the best color?", got_right: false, points: 3}
+])
+
+question1 = Question.all.first
 
 Answer.create([
-  {question_id: 1, content: "green", is_picked: false}
-  ])
+  {question: question1, content: "green", is_picked: false}
+])
