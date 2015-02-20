@@ -1,4 +1,4 @@
-class QuizController < ApplicationController
+class StudentsQuizzesController < ApplicationController
 
   def index
     @student = Student.find(session[:student_id])

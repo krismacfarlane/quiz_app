@@ -1,4 +1,4 @@
-class QuizzesController < ApplicationController
+class InstructorsQuizzesController < ApplicationController
 
   def show
     @quiz = Quiz.find(params[:id])
@@ -6,13 +6,13 @@ class QuizzesController < ApplicationController
 
   def create
     quiz = Quiz.create(quiz_params)
-    redirect_to quiz_path(quiz)
+    redirect_to instructors_quiz_path(quiz)
   end
 
   def new
-    @quiz = Quiz.new
+    @instructors_quiz = Quiz.new
     # 3.times do
-      question= @quiz.questions.build
+      question= @instructors_quiz.questions.build
       4.times { question.answers.build }
     # end
   end
