@@ -1,0 +1,4 @@
+<h1>Welcome to <%=@cohort.name.capitalize%></h1>
+
+      <%= button_to 'Create New Quiz', new_quiz_path, method: :get %>
+      <%= button_to 'View all Quizzes ' , quizzes_path, method: :get %>
