@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   root 'home#index'
 
 # //////////SESSIONS ROUTES/////////////////
-  get    '/login/:title'  => 'sessions#new'
-  post   '/login/:title'  => 'sessions#create'
-  delete '/logout/:title' => 'sessions#destroy'
+  get    '/login/:title', to: 'sessions#new',     as: :new_login
+  post   '/login/:title', to: 'sessions#create',  as: :login
+  delete '/logout',       to: 'sessions#destroy', as: :logout
 
   get    '/quiz'          => 'quiz#index'
 

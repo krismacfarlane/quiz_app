@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20150218151710) do
     t.string   "name",                        null: false
     t.string   "email",                       null: false
     t.string   "password_digest"
-    t.integer  "cohort_id",      default: 1
+    t.integer  "cohort_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
