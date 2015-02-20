@@ -1,4 +1,4 @@
-class QuizController < ApplicationController
+class StudentsQuizzesController < ApplicationController
 
   def index
     quiz_array = Quiz.where('been_taken = ? AND student_id = ?', false, session[:student_id])
