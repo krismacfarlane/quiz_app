@@ -3,10 +3,10 @@
 <div class='taken'>
   <ol>
     <% @student.quizzes.each do |q| %>
-    <li><a href="/quizzes/<%= q.id %>"><%= q.name %></a></li>
+    <li><a href="/instructors_quizzes/<%= q.id %>"><%= q.name %></a></li>
     <% end %>
   </ol>
 </div>
 
-<%= button_to 'Check for New Quiz', quiz_path, method: :get %>
+<%= button_to 'Check for New Quiz', students_quizzes_path, method: :get %>
 <%= button_to 'Logout', logout_path, method: :delete %>
