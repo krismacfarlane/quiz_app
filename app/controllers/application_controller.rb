@@ -6,11 +6,21 @@ class ApplicationController < ActionController::Base
   # @student = Student.find(session[:student_id])
 
   def current_instructor
-    @current_instructor ||= Instructor.find(session[:instructor_id]) if session[:instructor_id]
+    @current_instructor ||= Instructor.find_by_id(session[:instructor_id]) if session[:instructor_id]
+    if @current_instructor
+      true
+    else
+      logout
+    end
   end
 
   def current_student
-    @current_student ||= Student.find(session[:student_id]) if session[:student_id]
+    @current_student ||= Student.find_by_id(session[:student_id]) if session[:student_id]
+    if @current_student
+      true
+    else
+      logout
+    end
   end
 
   # makes current_instructor available in our views
@@ -23,6 +33,10 @@ class ApplicationController < ActionController::Base
 
   def authorize_student
     redirect_to '/login/student' unless current_student
+  end
+
+  def logout
+    session[:student_id], session[:instructor_id] = nil
   end
 
 end
