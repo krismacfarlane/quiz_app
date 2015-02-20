@@ -5,8 +5,8 @@ class CreateQuizzes < ActiveRecord::Migration
        t.integer    'grade',          :default => 0
        t.boolean    'has_grade',      :default => false
        t.boolean    'been_taken',     :default => false
-       t.references 'students'
-       t.references 'cohorts'
+       t.references 'student'
+       t.references 'cohort'
        t.timestamps
     end
   end

@@ -3,7 +3,7 @@ class CreateAnswers < ActiveRecord::Migration
     create_table :answers do |t|
        t.string     'content'
       t.boolean     'is_picked', :default => false
-      t.references  'questions'
+      t.references  'question'
     end
   end
 end

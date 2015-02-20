@@ -4,7 +4,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.string     'content'
       t.boolean    'got_right', :default => false
       t.integer    'points'   , :default => 0
-      t.references 'quizzes'
+      t.references 'quiz'
     end
   end
 end
