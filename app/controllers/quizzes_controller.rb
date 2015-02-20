@@ -18,7 +18,7 @@ class QuizzesController < ApplicationController
   end
 
   def quiz_params
-
+    params.require(:quiz).permit(:name,:cohort_id)
   end
 
 end
