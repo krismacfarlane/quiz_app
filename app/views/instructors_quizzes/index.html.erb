@@ -6,4 +6,6 @@
   <% end %>
 </ul>
 
+<INPUT TYPE="button" VALUE="Back" onClick="history.go(-1);">
 <%= button_to 'create new quiz', new_instructors_quiz_path, method: :get %>
+<%= button_to 'Logout', logout_path, method: :delete %>
