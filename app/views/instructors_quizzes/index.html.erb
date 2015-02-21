@@ -1,0 +1,9 @@
+<h1>These are the Quizzes!</h1>
+
+<ul>
+  <% @quizzes.each do |q| %>
+    <li><%= q.name %></li>
+  <% end %>
+</ul>
+
+<%= button_to 'create new quiz', new_instructors_quiz_path, method: :get %>
