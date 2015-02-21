@@ -1,11 +1,17 @@
 <h1> Welcome <%=@instructor.name%></h1>
 
-<ul>
+<% if @instructor.cohorts = [] %>
+  <%= button_to 'Create a new cohort', new_cohort_path, method: :get, :class => :button %>
+<% else %>
+  <ul>
    <% @instructor.cohorts.each do |c|  %>
     <li>
       <%= button_to c.name.capitalize, cohort_path, method: :get, :class => :button %>
     </li>
    <%end%>
+  </ul>
+<% end %>
+
  </ul>
 
  <%= button_to 'Logout', logout_path, method: :delete %>

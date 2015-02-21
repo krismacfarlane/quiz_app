@@ -1,0 +1,10 @@
+<%= form_for @cohort do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.hidden_field :instructor_id, value: @instructor_id %>
+  <%= f.label :room %>
+  <%= f.text_field :room %>
+  <%= f.label :producer %>
+  <%= f.text_field :producer %>
+  <%= f.submit "Create Cohort" %>
+<% end %>
