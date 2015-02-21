@@ -3,7 +3,7 @@
 <div class='taken'>
   <ol>
     <% @student.quizzes.each do |q| %>
-    <li><a href="/instructors_quizzes/<%= q.id %>"><%= q.name %></a></li>
+    <li><a href="/students_quizzes/<%= q.id %>"><%= q.name %></a></li>
     <% end %>
   </ol>
 </div>

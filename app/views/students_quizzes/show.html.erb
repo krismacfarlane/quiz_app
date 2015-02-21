@@ -1,0 +1,12 @@
+<h1> <%=@quiz.name%> </h1>
+
+<% @quiz.questions.each do |q|%>
+  <%= q[:content] %>
+  <ul>
+  <% q.answers.each do |a| %>
+    <li><%= a.content %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<%= button_to 'Back' , student_path, method: :get, :class => :button %>
