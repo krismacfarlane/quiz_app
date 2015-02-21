@@ -1,6 +1,8 @@
 class StudentsQuizzesController < ApplicationController
 
   def index
+    quiz_array = Quiz.where('been_taken = ? AND student_id = ?', false, session[:student_id])
+    # quiz_array = Quiz.where(been_taken: false && :student_id == session[:student_id])
     @student = Student.find(session[:student_id])
     # binding.pry
     # @student.cohort.quizzes
