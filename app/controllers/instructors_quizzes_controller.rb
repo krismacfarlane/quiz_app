@@ -5,8 +5,12 @@ class InstructorsQuizzesController < ApplicationController
   end
 
   def create
-    quiz = Quiz.create(quiz_params)
-    redirect_to instructors_quiz_path(quiz)
+    # binding.pry
+    @quiz = Quiz.create(quiz_params)
+    @question = Question.new
+    grab_questions
+    grab_answers
+    redirect_to instructors_quiz_path(@quiz)
   end
 
   def new
@@ -18,7 +22,24 @@ class InstructorsQuizzesController < ApplicationController
   end
 
   def quiz_params
-    params.require(:quiz).permit(:name,:cohort_id)
+    params.require(:quiz).permit(:name,:cohort_id,:questions_attributes)
+  end
+
+  def grab_questions
+    question = params["quiz"]["questions_attributes"]["0"]["content"]
+    @question.content = question
+    @question.quiz_id = @quiz.id
+    @question.save
+  end
+
+  def grab_answers
+    answers = params["quiz"]["questions_attributes"]["0"]["answers_attributes"]
+    answers.each do |a|
+      b = Answer.new
+      b.content = a[1]["content"]
+      b.question_id = @question.id
+      b.save
+    end
   end
 
 end
