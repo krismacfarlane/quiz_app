@@ -16,9 +16,8 @@ class StudentsQuizzesController < ApplicationController
     end
   end
 
-    # quiz_array.each do |q|
-    #   q.students.each do |s|
-    #     s.id == @student.id
-    #   end
-    # end
+  def show
+    @quiz = Quiz.find(params[:id])
+  end
+
 end
