@@ -40,7 +40,7 @@ Student.create([
   {name: "Jeff", email: "jeff@gmail.com", password: "cats"},
   {name: "Diego", email: "diego@gmail.com", password: "cats"},
   {name: "Jennifer", email: "jenn@gmail.com",password: "cats"},
-  {name: "Frank",email: "frank@gmail.com"m password: "cats"}
+  {name: "Frank",email: "frank@gmail.com", password: "cats"}
 
 ])
 
