@@ -17,10 +17,11 @@ Instructor.create([
   {name: "Phil", email: "phil@gmail.com", password: "cats"},
   {name: "PJ", email: "pj@gmail.com", password: "cats"},
   {name: "Travis", email:"travis@gmail.com", password:"cats"}
-
 ])
 
-phil = Instructor.all.first
+phil   = Instructor.find_by(name: 'Phil')
+pj     = Instructor.find_by(name: 'Travis')
+travis = Instructor.find_by(name: 'PJ')
 
 Cohort.create([
   {name: "godot", instructor: phil, room: "3E", producer: "Sarah"},
@@ -29,22 +30,22 @@ Cohort.create([
   {name: "reed",   instructor: travis, room: "3C", producer: "Jessica"}
 ])
 
-godot = Cohort.all.first
+godot, peach, blossom, reed = * Cohort.all
 
 Student.create([
   {name: "Bob", email: "bob@gmail.com", password: "cats"},
   {name: "Billy", email: "billy@gmail.com", password: "cats"},
   {name: "David", email: "david@gmail.com", password: "cats"},
   {name: "Mike", email: "mike@gmail.com", password: "cats"},
-  {name: "Kisten", email: "kristen@gmail.com", password: "cats"},
+  {name: "Kristen", email: "kristen@gmail.com", password: "cats"},
   {name: "Jeff", email: "jeff@gmail.com", password: "cats"},
   {name: "Diego", email: "diego@gmail.com", password: "cats"},
   {name: "Jennifer", email: "jenn@gmail.com",password: "cats"},
-  {name: "Frank",email: "frank@gmail.com", password: "cats"}
 
+  {name: "Frank",email: "frank@gmail.com", password: "cats"}
 ])
 
-bob, billy = * Student.all
+bob, billy, david, mike, kristen, jeff, diego, jennifer, frank = * Student.all
 
 Quiz.create([
   {name: "Quiz 1", grade: 0, has_grade: false, student: bob, cohort: godot},
@@ -56,30 +57,21 @@ Quiz.create([
   {name: "quiz 7", grade: 0, has_grade: false, student: david, cohort:reed},
   {name: "quiz 8", grade: 0, has_grade: false, student: jeff, cohort:peach},
   {name: "quiz 9", grade: 0, has_grade: false, student: frank, cohort:reed}
-
-
 ])
 
-quiz1 = Quiz.all.first
+quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7 = * Quiz.all
 
 Question.create([
   {quiz: quiz1, content: "What is the best color?", got_right: false, points: 3},
   {quiz: quiz2, content: "Is the glass half full or half empty?", got_right: false, points: 3},
   {quiz: quiz3, content: "Is reality tv educational?", got_right: false, points: 3},
-   {quiz: quiz4, content: "Would Maddie grow to become the next trash tv star?", got_right: false, points: 3},
-    {quiz: quiz5, content: "What is your favorite animal?", got_right: false, points: 3},
-   {quiz: quiz6, content: "Is OJ Simpson really innocent?", got_right: false, points: 3},
-    {quiz: quiz7, content: "What is your favorite cuisine?", got_right: false, points: 3}
-
-
-
-
-
-
-
+  {quiz: quiz4, content: "Would Maddie grow to become the next trash tv star?", got_right: false, points: 3},
+  {quiz: quiz5, content: "What is your favorite animal?", got_right: false, points: 3},
+  {quiz: quiz6, content: "Is OJ Simpson really innocent?", got_right: false, points: 3},
+  {quiz: quiz7, content: "What is your favorite cuisine?", got_right: false, points: 3}
 ])
 
-question1 = Question.all.first
+question1, question2, question3, question4, question5, question6, question7 = * Question.all
 
 Answer.create([
   {question: question1, content: "green", is_picked: false},
