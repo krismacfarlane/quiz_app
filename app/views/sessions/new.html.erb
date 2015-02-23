@@ -1,9 +1,27 @@
-<h1><%= params[:title].capitalize %> Login</h1>
+<center>
+  <h1><%= params[:title].capitalize %> Login</h1>
 
-<%= form_tag "/login/#{params[:title]}" do %>
-  Email: <%= text_field_tag :email %><br>
-  Password: <%= password_field_tag :password %><br>
-  <%= submit_tag "Login" %>
-<% end %>
+  <%= form_tag "/login/#{params[:title]}" do %>
+    <table>
+      <tr>
+        <td>Email:</td>
+        <td><%= text_field_tag :email %></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td> <%= password_field_tag :password %></td>
+      </tr>
+    </table>
+    <tr>
+        <td><%= submit_tag "Login", :class => :login_button %></td>
+        <td>
+          <button type="button" onClick="window.location.href='/<%= params[:title] %>s/new'" id="create_user_button">Create new <%= params[:title] %>
 
-<a href="/<%= params[:title] %>s/new">Create new <%= params[:title] %></a>
+        </td>
+      </tr>
+
+    </table>
+  <% end %>
+</center>
+
+
