@@ -9,14 +9,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header>
+  <%= image_tag "ga_logo.jpg", :height => 125, :width => 125, :class => :header_logo %>
+  <h1 class="app_name">GA Quiz Creator</h1>
+</header>
 
 
 <%= yield %>
 
-<footer>
-<%= image_tag "ga_logo.jpg", :height => 125, :width => 125, :class => :header_logo %>
-</footer>
 
+<!-- <footer>
+Created by PACKers, WDI Godot
+</footer> -->
 </body>
 </html>

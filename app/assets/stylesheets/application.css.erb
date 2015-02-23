@@ -14,12 +14,18 @@
  *= require_self
  */
 
+header {
+  color: black;
+  font-size: 24px;
+  text-align: center;
+}
+
 body {
-  background-image: url(<%= asset_path 'Wallpaper.jpg' %>);
   background-size: cover;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: bold;
   font-family: 'Oswald';
+  background-color: #FDEEF4  ;
 }
 
 .header_logo {
@@ -29,16 +35,17 @@ body {
 .to_login_button {
   width: 20em;
   height: 5em;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: bold;
-  font-family: 'Oswald';
+  font: 'Oswald';
 }
 
 .login_button {
-  width: 10em;
-  height: 2em;
+  width: 8em;
+  height: 5em;
   font-weight: bold;
   border:none;
+  font-size: 10px;
 }
 
 #instructor_login {
@@ -46,7 +53,7 @@ body {
 }
 
 #student_login {
-  background-color: green;
+  background-color: red;
 }
 
 .button_to {
@@ -57,4 +64,8 @@ body {
   font-weight: bold;
   border: none;
   height: 2em;
+  width: 8em;
+  height: 5em;
+  font: 'Oswald';
 }
+
