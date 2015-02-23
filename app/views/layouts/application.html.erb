@@ -10,7 +10,7 @@
 </head>
 <body>
 <header>
-  <%= image_tag "ga_logo.jpg", :height => 125, :width => 125, :class => :header_logo %>
+  <%= link_to image_tag("ga_logo.jpg", :height => 125, :width => 125, :class => :header_logo), "https://generalassemb.ly/"%>
   <h1 class="app_name">GA Quiz Creator</h1>
 </header>
 
@@ -18,8 +18,7 @@
 <%= yield %>
 
 
-<!-- <footer>
-Created by PACKers, WDI Godot
-</footer> -->
 </body>
 </html>
+
+
