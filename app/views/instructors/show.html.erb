@@ -1,6 +1,6 @@
 <h1> Welcome <%=@instructor.name%></h1>
 
-<% if @instructor.cohorts = [] %>
+<% if @instructor.cohorts == [] %>
   <%= button_to 'Create a new cohort', new_cohort_path, method: :get, :class => :button %>
 <% else %>
   <ul>
