@@ -2,7 +2,7 @@ class StudentsController < ApplicationController
   before_action(:authorize_student, :except => [:new, :create])
 
   def show
-    Student.save_data_from_api
+    # Student.save_data_from_api
     @students = Student.all
     @student = Student.find(params[:id])
   end
