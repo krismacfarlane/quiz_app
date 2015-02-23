@@ -1,14 +1,24 @@
-<h1>Create a new instructor</h1>
+
+<center> <h1>Create a new instructor</h1>
 
 <%= form_for(@instructor) do |i|%>
-
-  <%= i.label :name%>
-  <%= i.text_field :name%><br>
-  <%= i.label :email%>
-  <%= i.text_field :email%><br>
-  <%= i.label :password%>
-  <%= i.password_field :password%><br>
-  <%= i.label :password_confirmation%>
-  <%= i.password_field :password_confirmation%><br>
-  <%= i.submit%>
+<table>
+  <tr>
+  <td><%= i.label :name%></td>
+  <td><%= i.text_field :name%></td>
+</tr>
+<tr>
+  <td><%= i.label :email%></td>
+  <td><%= i.text_field :email%></td>
+  </tr>
+  <tr>
+    <td><%= i.label :password%></td>
+    <td><%= i.password_field :password%></td>
+  </tr>
+    <td><%= i.label :password_confirmation%></td>
+    <td><%= i.password_field :password_confirmation%></td>
+    <td><%= i.submit%></td>
+  </tr>
+</table>
 <% end %>
+</center>
