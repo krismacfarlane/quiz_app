@@ -2,12 +2,15 @@
 <html>
 <head>
   <title>QuizCreator</title>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= javascript_include_tag :defaults, :cache => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<%= image_tag "ga_logo.jpg", :height => 125, :width => 125, :class => :header_logo %>
 
 <%= yield %>
 
