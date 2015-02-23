@@ -1,5 +1,5 @@
-<h1>Welcome to Quiz Creator</h1>
+<center><h1>Welcome to Quiz Creator</h1></center>
 
-<%= button_to "Instructor Login", '/login/instructor', method: "get", :class => :button %>
-<%= button_to "Student Login", '/login/student', method: "get", :class => :button %>
+<%= button_to "Instructor Login", '/login/instructor', method: "get", :class => :to_login_button, :id => :instructor_login %>
+<%= button_to "Student Login", '/login/student', method: "get", :class => :to_login_button, :id => :student_login%>
 
